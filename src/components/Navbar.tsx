@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.avif";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -15,8 +16,11 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl"
     >
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
-          studio<span className="text-brand">.</span>
+        <a href="#" className="flex items-center gap-2.5">
+          <img src={logo} alt="Toah" className="h-8 w-8 rounded-full object-cover" />
+          <span className="text-lg font-semibold tracking-tight text-foreground">
+            Toah<span className="text-brand">.</span>
+          </span>
         </a>
         <div className="flex items-center gap-8">
           {navLinks.map((link) => (
